@@ -4,7 +4,7 @@
 from sys import argv
 from requests import get
 
-link = "https://jsonplaceholder.typicode.com/"
+link = "https://jsonplaceholder.typicode.com/users/"
 
 
 def export_data_CSV():
