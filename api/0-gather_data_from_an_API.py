@@ -12,12 +12,14 @@ def employee_todo(employeeId):
     display = requests.get(link)
     return display.json()
 
+
 def employee_name(employeeId):
     """returns name of specific employee"""
     link = "https://jsonplaceholder.typicode.com/"
     link += "users/{}".format(employeeId)
     display = requests.get(link)
     return display.json().get("name")
+
 
 def tasks_done(tasks):
     """returns number of tasks completed by employee"""
@@ -27,6 +29,7 @@ def tasks_done(tasks):
         if task.get("completed"):
             tasks_completed.append(task)
     return tasks_completed
+
 
 def print_tasks(employeeName, completedTasks, totalTasks):
     """print all tasks assigned to employee"""
