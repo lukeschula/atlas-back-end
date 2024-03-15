@@ -20,7 +20,6 @@ def export_data_CSV():
         with open(convert, 'a', encoding='uft-8') as f:
             f.write(display)
 
+
 if __name__ == '__main__':
     export_data_CSV()
-
-
