@@ -17,7 +17,7 @@ def export_data_CSV():
                   '"' + str(task['completed']) + '",' + '"' + task['title'] +\
                   '"\n'
 
-        with open(convert, 'a', encoding='uft-8') as f:
+        with open(convert, 'a', encoding='utf-8') as f:
             f.write(display)
 
 
