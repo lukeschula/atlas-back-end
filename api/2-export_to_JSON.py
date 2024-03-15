@@ -26,7 +26,7 @@ def convert_JSON(id):
 
     convert_json[str(id)] = data
 
-    with open (JSON_file, 'w', encoding='utf-8') as f:
+    with open(JSON_file, 'w', encoding='utf-8') as f:
         dump(convert_json, f)
 
 
