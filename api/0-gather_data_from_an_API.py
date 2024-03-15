@@ -34,7 +34,7 @@ def tasks_done(tasks):
 def print_tasks(employeeName, completedTasks, totalTasks):
     """print all tasks assigned to employee"""
     print("Employee {} is done with tasks({}/{}):"
-          .format(employeeName, completedTasks, totalTasks))
+          .format(employeeName, len(completedTasks), totalTasks))
     for task in completedTasks:
         print("\t {}".format(task.get("title")))
 
@@ -44,4 +44,4 @@ if __name__ == "__main__":
     tasks = employee_todo(employeeId)
     employeeName = employee_name(employeeId)
     completedTasks = tasks_done(tasks)
-    print_tasks(employeeName, completedTasks, tasks)
+    print_tasks(employeeName, completedTasks, len(tasks))
