@@ -8,14 +8,14 @@ link = "https://jsonplaceholder.typicode.com/"
 
 
 def export_data_CSV():
-    employee = get(link + argv[1]).json()
+    emp = get(link + argv[1]).json()
     tasks = get(link + argv[1] + '/todos').json()
     convert = argv[1] + '.csv'
 
     for task in tasks:
-        display = '"' + str(employee['id']) + '",' + '"' + employee['username'] + '",' +\
-        '"' + str(task['completed']) + '",' + '"' + task['title'] +\
-        '"\n'
+        display = '"' + str(emp['id']) + '",' + '"' + emp['username'] + '",' +\
+                  '"' + str(task['completed']) + '",' + '"' + task['title'] +\
+                  '"\n'
 
         with open(convert, 'a', encoding='uft-8') as f:
             f.write(display)
